@@ -15,25 +15,25 @@ HTML_FORM = """
 <html>
 <head>
     <title>Wine Quality Prediction</title>
+</head>
+<body>
 <form action="/predict" method="post">
-    <p>Fixed Acidity: <input type="number" name="fixed_acidity" required></p>
-    <p>Volatile Acidity: <input type="number" name="volatile_acidity" required></p>
-    <p>Citric Acid: <input type="number" name="citric_acid" required></p>
-    <p>Residual Sugar: <input type="number" name="residual_sugar" required></p>
-    <p>Chlorides: <input type="number" name="chlorides" required></p>
-    <p>Free Sulfur Dioxide: <input type="number" name="free_sulfur_dioxide" required></p>
-    <p>Total Sulfur Dioxide: <input type="number" name="total_sulfur_dioxide" required></p>
-    <p>Density: <input type="number" name="density" required></p>
-    <p>pH: <input type="number" name="pH" required></p>
-    <p>Sulphates: <input type="number" name="sulphates" required></p>
-    <p>Alcohol: <input type="number" name="alcohol" required></p>
+    <p>Fixed Acidity: <input type="number" step="any" name="fixed_acidity" required></p>
+    <p>Volatile Acidity: <input type="number" step="any" name="volatile_acidity" required></p>
+    <p>Citric Acid: <input type="number" step="any" name="citric_acid" required></p>
+    <p>Residual Sugar: <input type="number" step="any" name="residual_sugar" required></p>
+    <p>Chlorides: <input type="number" step="any" name="chlorides" required></p>
+    <p>Free Sulfur Dioxide: <input type="number" step="any" name="free_sulfur_dioxide" required></p>
+    <p>Total Sulfur Dioxide: <input type="number" step="any" name="total_sulfur_dioxide" required></p>
+    <p>Density: <input type="number" step="any" name="density" required></p>
+    <p>pH: <input type="number" step="any" name="pH" required></p>
+    <p>Sulphates: <input type="number" step="any" name="sulphates" required></p>
+    <p>Alcohol: <input type="number" step="any" name="alcohol" required></p>
     <button type="submit">Predict Quality</button>
 </form>
-
 {% if prediction %}
     <h3>Predicted Wine Quality: {{ prediction }}</h3>
 {% endif %}
-
 </body>
 </html>
 """
