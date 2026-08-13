@@ -62,7 +62,7 @@ def predict():
     ]
     
     # Make prediction
-    input_array = np.array[features]
+    input_array = np.array(features).reshape(1, -1)
     prediction = model.predict(input_array)[0]
 
     # Render the result on the web page
